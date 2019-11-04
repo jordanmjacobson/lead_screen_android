@@ -14,12 +14,12 @@ import android.view.ViewGroup;
 
 import com.example.leadscreenguide.R;
 
-public class references extends Fragment {
+public class ReferencesFragment extends Fragment {
 
     private ReferencesViewModel mViewModel;
 
-    public static references newInstance() {
-        return new references();
+    public static ReferencesFragment newInstance() {
+        return new ReferencesFragment();
     }
 
     @Override
