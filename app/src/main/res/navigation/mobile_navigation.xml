@@ -19,12 +19,12 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.leadscreenguide.ui.notifications.NotificationsFragment"
+        android:name="com.example.leadscreenguide.ui.about.NotificationsFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_references"
-        android:name="com.example.leadscreenguide.ui.notifications.NotificationsFragment"
+        android:name="com.example.leadscreenguide.ui.references.ReferencesFragment"
         android:label="@string/title_references"
         tools:layout="@layout/references_fragment" />
 </navigation>

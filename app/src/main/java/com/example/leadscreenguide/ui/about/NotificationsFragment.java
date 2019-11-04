@@ -1,4 +1,4 @@
-package com.example.leadscreenguide.ui.notifications;
+package com.example.leadscreenguide.ui.about;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
