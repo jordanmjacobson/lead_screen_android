@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.leadscreenguide.R;
-import com.example.leadscreenguide.ui.dashboard.DashboardViewModel;
 
 public class ReferencesFragment extends Fragment {
 

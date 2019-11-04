@@ -10,7 +10,7 @@ public class ReferencesViewModel extends ViewModel {
 
     public ReferencesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is references fragment");
+        mText.setValue("This is references fragment_disclaimer");
     }
 
     public LiveData<String> getText() {

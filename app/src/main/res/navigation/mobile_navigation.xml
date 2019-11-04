@@ -12,16 +12,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.leadscreenguide.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_disclaimer"
+        android:name="com.example.leadscreenguide.ui.disclaimer.DisclaimerFragment"
         android:label="@string/title_disclaimer"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_disclaimer" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.leadscreenguide.ui.about.NotificationsFragment"
+        android:id="@+id/navigation_about"
+        android:name="com.example.leadscreenguide.ui.about.AboutFragment"
         android:label="@string/title_about"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/navigation_references"
         android:name="com.example.leadscreenguide.ui.references.ReferencesFragment"
