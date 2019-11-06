@@ -20,12 +20,11 @@ public class ReferencesFragment extends Fragment {
 
     private ReferencesViewModel referencesViewModel;
 
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         referencesViewModel =
                 ViewModelProviders.of(this).get(ReferencesViewModel.class);
-        View root = inflater.inflate(R.layout.references_fragment, container, false);
+        View root = inflater.inflate(R.layout.fragment_references, container, false);
         final TextView textView = root.findViewById(R.id.text_references);
         referencesViewModel.getText().observe(this, new Observer<String>() {
             @Override
