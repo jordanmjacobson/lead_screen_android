@@ -25,38 +25,38 @@
         <Button
             android:id="@+id/first"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Who, How, When to Screen">
         </Button>
         <Button
             android:id="@+id/second"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="How to Manage Lead Levels">
         </Button>
         <Button
             android:id="@+id/third"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="How to Manage Lead Levels">
+            android:layout_height="wrap_content"
+            android:text="Signs/Symptoms Lead Poisoning">
         </Button>
         <Button
             android:id="@+id/fourth"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="How to Manage Lead Levels">
+            android:layout_height="wrap_content"
+            android:text="Lead Exposure Risk Survey">
         </Button>
         <Button
             android:id="@+id/fifth"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="How to Manage Lead Levels">
+            android:layout_height="wrap_content"
+            android:text="High Lead Evaluation">
         </Button>
         <Button
             android:id="@+id/sixth"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="How to Manage Lead Levels">
+            android:layout_height="wrap_content"
+            android:text="Differing Guidelines">
         </Button>
 
     </LinearLayout>
