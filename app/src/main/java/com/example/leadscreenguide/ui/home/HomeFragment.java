@@ -1,5 +1,6 @@
 package com.example.leadscreenguide.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.leadscreenguide.HomeActivity;
 import com.example.leadscreenguide.R;
 
 public class HomeFragment extends Fragment {
@@ -38,7 +40,8 @@ public class HomeFragment extends Fragment {
         firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent= new Intent(view.getContext(), HomeActivity.class);
+                startActivity(intent);
             }
         });
         return root;
