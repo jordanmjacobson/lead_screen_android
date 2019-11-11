@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (choice== 1) {
                     //open lead exposure risk survey
+                    doSurvey();
                 }
 
                 if (choice== 2) {
@@ -146,6 +147,16 @@ public class HomeActivity extends AppCompatActivity {
         holder2.setVisibility(View.GONE);
 
         holder1.setText("it worked way 6");
+    }
+
+    public void doSurvey() {
+        getSupportActionBar().setTitle("Lead Exposure Risk Survey");
+
+        button1.setVisibility(View.GONE);
+        button2.setVisibility(View.GONE);
+        holder2.setVisibility(View.GONE);
+
+        holder1.setText("survey stuff would go here");
     }
     public static void setChoice(int num) {
         choice= num;
