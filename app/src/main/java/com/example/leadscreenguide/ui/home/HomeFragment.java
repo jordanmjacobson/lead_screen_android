@@ -22,6 +22,11 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
 
     private Button firstButton= null;
+    private Button secondButton= null;
+    private Button thirdButton= null;
+    private Button fourthButton= null;
+    private Button fifthButton= null;
+    private Button sixthButton= null;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -40,10 +45,62 @@ public class HomeFragment extends Fragment {
         firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                HomeActivity.setChoice(1);
                 Intent intent= new Intent(view.getContext(), HomeActivity.class);
                 startActivity(intent);
             }
         });
+
+        secondButton = root.findViewById(R.id.second);
+        secondButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeActivity.setChoice(2);
+                Intent intent= new Intent(view.getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        thirdButton = root.findViewById(R.id.third);
+        thirdButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeActivity.setChoice(3);
+                Intent intent= new Intent(view.getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fourthButton = root.findViewById(R.id.fourth);
+        fourthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeActivity.setChoice(4);
+                Intent intent= new Intent(view.getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fifthButton = root.findViewById(R.id.fifth);
+        fifthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeActivity.setChoice(5);
+                Intent intent= new Intent(view.getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sixthButton = root.findViewById(R.id.sixth);
+        sixthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeActivity.setChoice(6);
+                Intent intent= new Intent(view.getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return root;
     }
 }

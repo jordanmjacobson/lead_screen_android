@@ -7,5 +7,40 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".HomeActivity"
     tools:showIn="@layout/activity_home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/holder1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text= "holder"
+            android:visibility="visible">
 
+        </TextView>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="button1"
+            android:visibility="visible">
+        </Button>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="button2"
+            android:visibility="visible">
+        </Button>
+        <TextView
+            android:id="@+id/holder2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text= "holder2"
+            android:visibility="visible">
+        </TextView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
