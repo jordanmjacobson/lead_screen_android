@@ -10,7 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.Stack;
-
+import android.text.Html;
+import android.text.Spanned;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -349,18 +350,21 @@ public class HomeActivity extends AppCompatActivity {
         button8.setVisibility(View.GONE);
 
 
-        holder1.setText("\nNYS Public Health Law and Regulations Require Health Care Providers to:\n" +
-                "• Test all children at age 1 year and again at age 2 with a blood lead test.\n" +
-                "• Assess all children ages 6 months to 6 years at every well child visit for risk of lead exposure and obtain a blood lead test if there is\n" +
-                "a positive response to ANY of the questions below in Clinical Lead Risk Assessment Questions for All Children Less than 6 Years. \n• Report point-of-care blood lead test results to the New York State Department of Health in accordance with guidance:\n" +
+        holder1.setText("\n"+bold("<strong>NYS Public Health Law and Regulations Require Health Care Providers to:</strong>")+" \n" +
+                "\n• Test all children at age 1 year and again at age 2 with a blood lead test.\n" +
+                "\n• Assess all children ages 6 months to 6 years at every well child visit for risk of lead exposure and obtain a blood lead test if there is\n" +
+                "a positive response to ANY of the questions below in Clinical Lead Risk Assessment Questions for All Children Less than 6 Years. \n" +
+                "\n• Report point-of-care blood lead test results to the New York State Department of Health in accordance with guidance:\n" +
                 "www.health.ny.gov/environmental/lead/laboratories.htm.\n" +
-                "• Provide parent or guardian of the child the result of the blood lead test. What Your Child’s Blood Lead Test Means: www.health.ny.gov/publications/2526.pdf provides helpful information to provide with the test results.\n" +
-                "• Provide anticipatory guidance to all parents or guardians of children as part of routine care, which may include the Lead Poisoning is a Danger for Every Baby and Child: www.health.ny.gov/publications/2594.pdf."+
-                "\nAdditional Testing Recommendations:\n• For capillary blood samples, ensure the child’s hands are washed thoroughly with soap and water. Dry with a clean, low-lint/dust- proof towel or air dry. Once washed, the clean finger must not be allowed to touch any surface, including the child’s other fingers. Any amount of lead present on the finger will contaminate the sample. An alcohol swab is not sufficient for removing contamination from the finger.\n" +
-                "• Test all children born outside of the U.S. up to age 16 years old, particularly refugee and internationally adopted children, upon arrival in the U.S. and again 3-6 months after they obtain permanent residences.\n" +
-                "• Test children of any age if lead exposure is suspected. All children found to have elevated blood lead levels regardless of age require follow-up services (see Management of Children According to Blood Lead Level p 2).\n" +
-                "• Ask the parent or guardian whether they plan to enroll, or if the child is already enrolled, in Medicaid, WIC, preschool/day care, an Early Intervention Program, Head Start, or kindergarten. These programs require blood lead testing documentation, which should be provided.");
+                "\n• Provide parent or guardian of the child the result of the blood lead test. What Your Child’s Blood Lead Test Means: www.health.ny.gov/publications/2526.pdf provides helpful information to provide with the test results.\n" +
+                "\n• Provide anticipatory guidance to all parents or guardians of children as part of routine care, which may include the Lead Poisoning is a Danger for Every Baby and Child: www.health.ny.gov/publications/2594.pdf."+
+                "\n\nAdditional Testing Recommendations:\n\n• For capillary blood samples, ensure the child’s hands are washed thoroughly with soap and water. Dry with a clean, low-lint/dust- proof towel or air dry. Once washed, the clean finger must not be allowed to touch any surface, including the child’s other fingers. Any amount of lead present on the finger will contaminate the sample. An alcohol swab is not sufficient for removing contamination from the finger.\n" +
+                "\n• Test all children born outside of the U.S. up to age 16 years old, particularly refugee and internationally adopted children, upon arrival in the U.S. and again 3-6 months after they obtain permanent residences.\n" +
+                "\n• Test children of any age if lead exposure is suspected. All children found to have elevated blood lead levels regardless of age require follow-up services (see Management of Children According to Blood Lead Level p 2).\n" +
+                "\n• Ask the parent or guardian whether they plan to enroll, or if the child is already enrolled, in Medicaid, WIC, preschool/day care, an Early Intervention Program, Head Start, or kindergarten. These programs require blood lead testing documentation, which should be provided.");
         button1.setText("Lead Exposure Risk Survey");
+
+
     }
     public void doChoice2() {
         getSupportActionBar().setTitle("How To Manage Lead Levels");
@@ -551,6 +555,16 @@ public class HomeActivity extends AppCompatActivity {
         button6.setVisibility(View.GONE);
         button7.setVisibility(View.GONE);
         button8.setVisibility(View.GONE);
+    }
+    public Spanned bold(String str){
+        Spanned retVal;
+        if(android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.N){
+            retVal = Html.fromHtml(str,Html.FROM_HTML_MODE_LEGACY);
+        }
+        else{
+            retVal = Html.fromHtml(str);
+        }
+        return retVal;
     }
 
 }
