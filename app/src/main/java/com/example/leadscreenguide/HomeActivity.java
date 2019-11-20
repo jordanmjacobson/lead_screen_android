@@ -335,7 +335,7 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
     public void doChoice1() {
-        getSupportActionBar().setTitle("Who,How,When to Screen");
+        getSupportActionBar().setTitle("Who, How, When to Screen");
 
         holder1.setVisibility(View.VISIBLE);
         holder2.setVisibility(View.GONE);
