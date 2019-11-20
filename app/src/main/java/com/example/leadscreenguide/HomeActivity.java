@@ -447,7 +447,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void doChoice10(){
-        doJustText("do less than 5 ug for capillary test\n");
+        doJustText("When to confirm with venous testing: \n- No confirmation needed. Average BLL for U.S. children ages 1-5 years is 1.4 μg/dL");
     }
 
     public void doChoice11(){

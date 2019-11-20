@@ -23,7 +23,9 @@
             android:gravity="left"
             android:text= "holder"
             android:visibility="visible"
-            android:textColor="@color/black">
+            android:textColor="@color/black"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
 
         </TextView>
         <Button
@@ -89,6 +91,8 @@
             android:gravity="left"
             android:textColor="@color/black"
             android:text= "holder2"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:visibility="visible">
         </TextView>
     </LinearLayout>
