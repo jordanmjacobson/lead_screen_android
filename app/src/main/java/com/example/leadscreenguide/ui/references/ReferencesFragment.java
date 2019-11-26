@@ -14,6 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import android.text.method.LinkMovementMethod;
+import android.text.Html;
+import android.text.Spanned;
+
 import com.example.leadscreenguide.R;
 
 public class ReferencesFragment extends Fragment {
@@ -26,15 +30,28 @@ public class ReferencesFragment extends Fragment {
                 ViewModelProviders.of(this).get(ReferencesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_references, container, false);
         final TextView textView = root.findViewById(R.id.text_references);
+
         referencesViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
+
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
         return root;
     }
 
+    public Spanned toSpan(String str){
+        Spanned retVal;
+        if(android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.N){
+            retVal = Html.fromHtml(str,Html.FROM_HTML_MODE_LEGACY);
+        }
+        else{
+            retVal = Html.fromHtml(str);
+        }
+        return retVal;
+    }
 
 
 }

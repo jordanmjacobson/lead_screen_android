@@ -5,14 +5,21 @@ import android.os.Build;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
-import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.Stack;
+import android.text.method.LinkMovementMethod;
 import android.text.Html;
 import android.text.Spanned;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -44,6 +51,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.left1);
@@ -399,6 +407,7 @@ public class HomeActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Signs/Symptoms of Lead Poisoning");
         doJustText();
 
+
     }
     public void doChoice4() {
         getSupportActionBar().setTitle("Lead Exposure Risk Survey");
@@ -549,7 +558,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void doChoice19(){
         doJustText();
-        holder2.setText("do 5-9 ug for venous test\n");
+        holder1.setText("do 5-9 ug for venous test\n");
     }
 
     public void doChoice20(){
