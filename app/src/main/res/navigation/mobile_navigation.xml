@@ -7,28 +7,28 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.leadscreenguide.ui.home.HomeFragment"
+        android:name="com.example.leadscreenguide.HomeFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_home"
         app:labelVisibilityMode="labeled" />
 
     <fragment
         android:id="@+id/navigation_disclaimer"
-        android:name="com.example.leadscreenguide.ui.disclaimer.DisclaimerFragment"
+        android:name="com.example.leadscreenguide.DisclaimerFragment"
         android:label="@string/title_disclaimer"
         tools:layout="@layout/fragment_disclaimer"
         app:labelVisibilityMode="labeled" />
 
     <fragment
         android:id="@+id/navigation_about"
-        android:name="com.example.leadscreenguide.ui.about.AboutFragment"
+        android:name="com.example.leadscreenguide.AboutFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about"
         app:labelVisibilityMode="labeled"/>
 
     <fragment
         android:id="@+id/navigation_references"
-        android:name="com.example.leadscreenguide.ui.references.ReferencesFragment"
+        android:name="com.example.leadscreenguide.ReferencesFragment"
         android:label="@string/title_references"
         tools:layout="@layout/fragment_references"
         app:labelVisibilityMode="labeled"/>

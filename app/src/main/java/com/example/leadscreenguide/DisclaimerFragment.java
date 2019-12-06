@@ -1,4 +1,4 @@
-package com.example.leadscreenguide.ui.disclaimer;
+package com.example.leadscreenguide;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
