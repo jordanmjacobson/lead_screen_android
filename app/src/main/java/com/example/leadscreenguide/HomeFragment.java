@@ -1,5 +1,4 @@
 package com.example.leadscreenguide;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import com.example.leadscreenguide.MainActivity;
-import com.example.leadscreenguide.R;
 
 public class HomeFragment extends Fragment {
 

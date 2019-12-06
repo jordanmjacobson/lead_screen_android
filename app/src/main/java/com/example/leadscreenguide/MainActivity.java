@@ -1,8 +1,6 @@
 package com.example.leadscreenguide;
-
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,7 +8,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -19,7 +16,6 @@ import java.util.Stack;
 import android.text.method.LinkMovementMethod;
 import android.text.Html;
 import android.text.Spanned;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
