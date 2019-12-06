@@ -1,108 +1,105 @@
 package com.example.leadscreenguide.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.appcompat.widget.Toolbar;
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
-import com.example.leadscreenguide.HomeActivity;
+import com.example.leadscreenguide.MainActivity;
 import com.example.leadscreenguide.R;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private Button firstButton;
+    private Button secondButton;
+    private Button thirdButton;
+    private Button fourthButton;
+    private Button fifthButton;
+    private Button sixthButton;
+    private TextView textView;
 
-    private Button firstButton= null;
-    private Button secondButton= null;
-    private Button thirdButton= null;
-    private Button fourthButton= null;
-    private Button fifthButton= null;
-    private Button sixthButton= null;
+        public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View root = inflater.inflate(R.layout.fragment_home, container, false);
+            initControls(root);
+            MainActivity.setFragOn();
+            MainActivity.getAct().setTitle(R.string.app_name);
+            MainActivity.getStk().clear();
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
+            firstButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainActivity.setChoice(1);
+                    MainActivity.doChoice(1);
+                }
+            });
 
+            secondButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainActivity.setChoice(2);
+                    MainActivity.doChoice(2);
+                }
+            });
 
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            thirdButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainActivity.setChoice(3);
+                    MainActivity.doChoice(3);
+                }
+            });
+
+            fourthButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainActivity.setChoice(4);
+                    MainActivity.doChoice(4);
+                }
+            });
+
+            fifthButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainActivity.setChoice(5);
+                    MainActivity.doChoice(5);
+                }
+            });
+
+            sixthButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainActivity.setChoice(6);
+                    MainActivity.doChoice(6);
+                }
+            });
+            return root;
+        }
+
+        public void initControls(View v) {
+            if (textView==null){
+                textView = v.findViewById(R.id.text_home);
+                textView.setText("Choose a Lead Screening Resource");
             }
-        });
-
-        firstButton = root.findViewById(R.id.first);
-        firstButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HomeActivity.setChoice(1);
-                Intent intent= new Intent(view.getContext(), HomeActivity.class);
-                startActivity(intent);
+            if (firstButton==null){
+                firstButton = v.findViewById(R.id.first);
             }
-        });
-
-        secondButton = root.findViewById(R.id.second);
-        secondButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HomeActivity.setChoice(2);
-                Intent intent= new Intent(view.getContext(), HomeActivity.class);
-                startActivity(intent);
+            if (secondButton==null){
+                secondButton = v.findViewById(R.id.second);
             }
-        });
-
-        thirdButton = root.findViewById(R.id.third);
-        thirdButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HomeActivity.setChoice(3);
-                Intent intent= new Intent(view.getContext(), HomeActivity.class);
-                startActivity(intent);
+            if (thirdButton==null){
+                thirdButton = v.findViewById(R.id.third);
             }
-        });
-
-        fourthButton = root.findViewById(R.id.fourth);
-        fourthButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HomeActivity.setChoice(4);
-                Intent intent= new Intent(view.getContext(), HomeActivity.class);
-                startActivity(intent);
+            if (fourthButton==null){
+                fourthButton = v.findViewById(R.id.fourth);
             }
-        });
-
-        fifthButton = root.findViewById(R.id.fifth);
-        fifthButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HomeActivity.setChoice(5);
-                Intent intent= new Intent(view.getContext(), HomeActivity.class);
-                startActivity(intent);
+            if (fifthButton==null){
+                fifthButton = v.findViewById(R.id.fifth);
             }
-        });
-
-        sixthButton = root.findViewById(R.id.sixth);
-        sixthButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HomeActivity.setChoice(6);
-                Intent intent= new Intent(view.getContext(), HomeActivity.class);
-                startActivity(intent);
+            if (sixthButton==null){
+                sixthButton = v.findViewById(R.id.sixth);
             }
-        });
-
-        return root;
-    }
+        }
 }
